@@ -22,4 +22,12 @@ public class SCR_Player_Wait : MonoBehaviour
         yield return new WaitForSeconds(1f);
         playerMovement.canDash = true;
     }
+    public IEnumerator pauseMovement()
+    {
+        playerMovement.canMove = false;
+        playerMovement.canDash = false;
+        yield return new WaitForSeconds(1f);
+        playerMovement.canMove = true;
+        playerMovement.canDash = true;
+    }
 }

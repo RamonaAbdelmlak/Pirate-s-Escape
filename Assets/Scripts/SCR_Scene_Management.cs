@@ -25,6 +25,6 @@ public class SCR_Scene_Management : MonoBehaviour
     public IEnumerator ReloadScene()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(1);
     }
 }
