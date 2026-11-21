@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class SCR_Scene_Management : MonoBehaviour
 {
+    public int sceneToLoad = 1;
+    public string tagCheck = "Floor";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +19,7 @@ public class SCR_Scene_Management : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag(tagCheck))
         {
             StartCoroutine(ReloadScene());
         }
@@ -25,6 +27,6 @@ public class SCR_Scene_Management : MonoBehaviour
     public IEnumerator ReloadScene()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

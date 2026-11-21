@@ -20,8 +20,12 @@ public class SCR_Enemy_Shot : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<SCR_Player_Health>().TakeDamage(10);
+        }
         Destroy(gameObject);
     }
 }

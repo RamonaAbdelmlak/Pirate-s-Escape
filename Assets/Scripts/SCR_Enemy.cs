@@ -6,6 +6,7 @@ public class SCR_Enemy : MonoBehaviour
     public GameObject bulletSource;
     public bool canShoot = true;
     public SCR_Enemy_Wait enemyWait;
+    public GameObject ignore;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

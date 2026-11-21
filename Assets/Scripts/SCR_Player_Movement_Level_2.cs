@@ -8,6 +8,7 @@ public class SCR_Player_Movement_Level_2 : MonoBehaviour
     public GameObject bulletSource;
     public Vector2 moveInput;
     public float moveSpeed;
+    public bool canMove = true;
     public float bulletSpeed;
     public InputAction fireBullet;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,7 +32,11 @@ public class SCR_Player_Movement_Level_2 : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = moveInput * moveSpeed;
+        if (canMove)
+        {
+            rb.linearVelocity = moveInput * moveSpeed;
+        }
+       
         
     }
 

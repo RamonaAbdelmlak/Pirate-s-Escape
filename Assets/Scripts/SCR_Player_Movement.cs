@@ -101,11 +101,11 @@ public class SCR_Player_Movement : MonoBehaviour
                 }
                 if (lastDirection > 0)
                 {
-                    playerAnim.PlayAnimation("Run Right");
+                    playerAnim.PlayAnimation("Dash Right");
                 }
                 else if (lastDirection < 0)
                 {
-                    playerAnim.PlayAnimation("Run Left");
+                    playerAnim.PlayAnimation("Dash Left");
                 }
                 StartCoroutine(playerWait.Dash());
             }

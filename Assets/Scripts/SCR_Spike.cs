@@ -29,13 +29,13 @@ public class SCR_Spike : MonoBehaviour
         {
             rb.AddForce(Vector2.up * verticalKnockback, ForceMode2D.Impulse);
             rb.AddForce(Vector2.left * verticalKnockback, ForceMode2D.Impulse);
-            playerAnim.PlayAnimation("Fall Left");
+            playerAnim.PlayAnimation("Dmg Right");
         }  
         else
         {
             rb.AddForce(Vector2.up * verticalKnockback, ForceMode2D.Impulse);
             rb.AddForce(Vector2.right * verticalKnockback, ForceMode2D.Impulse);
-            playerAnim.PlayAnimation("Fall Right");
+            playerAnim.PlayAnimation("Dmg Left");
         }
         StartCoroutine(playerWait.pauseMovement());
     }
